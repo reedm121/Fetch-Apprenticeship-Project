@@ -34,7 +34,6 @@ struct RecipeView: View {
                                 Button(action: {
                                     checkedIngredients[index].toggle()
                                 }) {
-                                    let config = UIImage.SymbolConfiguration(scale: .small)
                                     Image(systemName: checkedIngredients[index] ? "checkmark.circle.fill" : "circle")
                                         .foregroundColor(checkedIngredients[index] ? .secondary : .secondary)
                                         .font(.system(size: 20))

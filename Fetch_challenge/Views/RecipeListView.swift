@@ -44,7 +44,7 @@ struct RecipeListView: View {
             }
             .task {
                 do{
-                    self.meals = try await mealsAPI.fetchMealsByCategory(mealCategory: .dessert)
+                    self.meals = try await mealsAPI.fetchMealsByCategory(mealCategory: mealCategory)
                 }
                 catch{
                     print("error while fetching list of meals: \(error)")

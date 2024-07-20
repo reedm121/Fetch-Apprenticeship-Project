@@ -17,9 +17,11 @@
 		A2C8032E2C46CFFB00857541 /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C8032D2C46CFFB00857541 /* RecipeListView.swift */; };
 		A2C803302C46D87000857541 /* APIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C8032F2C46D87000857541 /* APIData.swift */; };
 		A2C803322C470A7400857541 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C803312C470A7400857541 /* RecipeView.swift */; };
-		A2C803362C4B1F7B00857541 /* CacheAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C803352C4B1F7B00857541 /* CacheAsyncImage.swift */; };
+		A2C803362C4B1F7B00857541 /* CachedAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C803352C4B1F7B00857541 /* CachedAsyncImage.swift */; };
 		A2C803382C4B24B600857541 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C803372C4B24B600857541 /* Extensions.swift */; };
-		A2C8033A2C4B290600857541 /* MyWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C803392C4B290600857541 /* MyWebView.swift */; };
+		A2C8033A2C4B290600857541 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C803392C4B290600857541 /* WebView.swift */; };
+		A2C8033E2C4B9A1100857541 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C8033D2C4B9A1100857541 /* Models.swift */; };
+		A2C803412C4C21F200857541 /* APIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C803402C4C21F200857541 /* APIHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +56,11 @@
 		A2C8032D2C46CFFB00857541 /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
 		A2C8032F2C46D87000857541 /* APIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIData.swift; sourceTree = "<group>"; };
 		A2C803312C470A7400857541 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
-		A2C803352C4B1F7B00857541 /* CacheAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheAsyncImage.swift; sourceTree = "<group>"; };
+		A2C803352C4B1F7B00857541 /* CachedAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImage.swift; sourceTree = "<group>"; };
 		A2C803372C4B24B600857541 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		A2C803392C4B290600857541 /* MyWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebView.swift; sourceTree = "<group>"; };
+		A2C803392C4B290600857541 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		A2C8033D2C4B9A1100857541 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		A2C803402C4C21F200857541 /* APIHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,15 +111,14 @@
 		A2C803002C46CCA600857541 /* Fetch_challenge */ = {
 			isa = PBXGroup;
 			children = (
-				A2C8032C2C46CFDA00857541 /* Views */,
-				A2C8032F2C46D87000857541 /* APIData.swift */,
 				A2C803012C46CCA600857541 /* Fetch_challengeApp.swift */,
-				A2C803372C4B24B600857541 /* Extensions.swift */,
-				A2C803352C4B1F7B00857541 /* CacheAsyncImage.swift */,
+				A2C8032C2C46CFDA00857541 /* Views */,
+				A2C8033B2C4B999F00857541 /* Models */,
+				A2C8033F2C4B9B5800857541 /* ViewModels */,
+				A2C8033C2C4B99ED00857541 /* Utilities */,
 				A2C803052C46CCA800857541 /* Assets.xcassets */,
 				A2C803072C46CCA800857541 /* Fetch_challenge.entitlements */,
 				A2C803082C46CCA800857541 /* Preview Content */,
-				A2C803392C4B290600857541 /* MyWebView.swift */,
 			);
 			path = Fetch_challenge;
 			sourceTree = "<group>";
@@ -148,11 +151,46 @@
 		A2C8032C2C46CFDA00857541 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A2C803422C4C22AE00857541 /* UtilityViews */,
 				A2C803032C46CCA600857541 /* ContentView.swift */,
 				A2C8032D2C46CFFB00857541 /* RecipeListView.swift */,
 				A2C803312C470A7400857541 /* RecipeView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A2C8033B2C4B999F00857541 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A2C8033D2C4B9A1100857541 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A2C8033C2C4B99ED00857541 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A2C803372C4B24B600857541 /* Extensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A2C8033F2C4B9B5800857541 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A2C8032F2C46D87000857541 /* APIData.swift */,
+				A2C803402C4C21F200857541 /* APIHelpers.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A2C803422C4C22AE00857541 /* UtilityViews */ = {
+			isa = PBXGroup;
+			children = (
+				A2C803392C4B290600857541 /* WebView.swift */,
+				A2C803352C4B1F7B00857541 /* CachedAsyncImage.swift */,
+			);
+			path = UtilityViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,13 +323,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2C803412C4C21F200857541 /* APIHelpers.swift in Sources */,
 				A2C803302C46D87000857541 /* APIData.swift in Sources */,
-				A2C8033A2C4B290600857541 /* MyWebView.swift in Sources */,
+				A2C8033A2C4B290600857541 /* WebView.swift in Sources */,
 				A2C803042C46CCA600857541 /* ContentView.swift in Sources */,
 				A2C8032E2C46CFFB00857541 /* RecipeListView.swift in Sources */,
 				A2C803022C46CCA600857541 /* Fetch_challengeApp.swift in Sources */,
 				A2C803322C470A7400857541 /* RecipeView.swift in Sources */,
-				A2C803362C4B1F7B00857541 /* CacheAsyncImage.swift in Sources */,
+				A2C8033E2C4B9A1100857541 /* Models.swift in Sources */,
+				A2C803362C4B1F7B00857541 /* CachedAsyncImage.swift in Sources */,
 				A2C803382C4B24B600857541 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
