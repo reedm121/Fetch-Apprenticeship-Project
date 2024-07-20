@@ -51,3 +51,7 @@ This app utilizes the following API endpoints from [TheMealDB](https://themealdb
 - **String Extensions**:
   - `trimWhitespace()`: Trims leading and trailing whitespace from a string.
   - `normalizeNewlines()`: Removes carriage return characters and ensures only double newlines are used.
+
+ ## Author
+
+Developed by Reed Gantz
